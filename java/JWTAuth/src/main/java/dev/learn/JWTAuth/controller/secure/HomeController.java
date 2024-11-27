@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api/v1/resources/")
 public class HomeController {
-    @GetMapping
+    @GetMapping("get")
     public ResponseEntity<String> home() {
         return ResponseEntity.ok("Hello World");
     }
 }
+

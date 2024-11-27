@@ -43,7 +43,6 @@ public class AuthService {
         Authentication auth = authManager.authenticate(
                 new UsernamePasswordAuthenticationToken(creds.getUsername(), creds.getPassword())
         );
-        System.out.println("AUTH PRINCIPAL"+auth.getPrincipal().toString());
         SecurityContextHolder.getContext().setAuthentication(auth);
         return jwtService.generateToken(auth);
     }
